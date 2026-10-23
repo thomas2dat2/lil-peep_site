@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111014;
+    color: #f1edf1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    border-bottom: 1px solid #30272f;
+}
+
+header h2 {
+    color: #e66b9b;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd4dc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e66b9b;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    min-height: 520px;
+    background-color: #19151b;
+}
+
+.texto {
+    max-width: 480px;
+}
+
+.subtitulo {
+    color: #e66b9b;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 76px;
+    margin-bottom: 25px;
+}
+
+.texto > p:not(.subtitulo) {
+    color: #c4bac5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 20px;
+    background-color: #e66b9b;
+    color: #171117;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #f18bb3;
+}
+
+.imagem {
+    width: 45%;
+}
+
+.imagem img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: grayscale(35%);
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 60px;
+    padding: 85px 8%;
+}
+
+.sobre h2,
+.musicas h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.descricao p {
+    color: #c4bac5;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.musicas {
+    padding: 80px 8%;
+    background-color: #19151b;
+}
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.projeto-card {
+    padding: 24px;
+    border: 1px solid #39303a;
+    background-color: #201a22;
+}
+
+.projeto-capa {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.projeto-card .tipo-projeto {
+    margin-bottom: 14px;
+    color: #e66b9b;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.projeto-card h3 {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.lista-musicas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.musica {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px;
+    border: 1px solid #39303a;
+    background-color: #201a22;
+    color: #f1edf1;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.musica:hover {
+    background-color: #2a202b;
+}
+
+.musica > span:first-child,
+.play {
+    color: #e66b9b;
+}
+
+.musica div {
+    flex: 1;
+}
+
+.musica h3 {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.musica p {
+    color: #a99eaa;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 8%;
+    flex-wrap: wrap;
+}
+
+footer h2 {
+    color: #e66b9b;
+    font-size: 22px;
+}
+
+footer p,
+footer a {
+    color: #a99eaa;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 22px 6%;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .inicio {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 55px 6%;
+    }
+
+    .inicio h1 {
+        font-size: 60px;
+    }
+
+    .imagem {
+        width: 100%;
+    }
+
+    .imagem img {
+        height: 300px;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 60px 6%;
+    }
+
+    .sobre h2,
+    .musicas h2 {
+        font-size: 32px;
+    }
+
+    .musicas {
+        padding: 60px 6%;
+    }
+
+    .lista-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-musicas {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 6%;
+    }
+}
